@@ -1,0 +1,29 @@
+<div class="container">
+
+	<br>
+		<h1>List Posts</h1>
+	<hr>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Posts</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <th scope="row">{{post.id}}</th>
+      <td>{{post.title}}</td>
+      <td><a routerLink="/post/{{post.id}}" class="btn btn-outline-success">Go</a></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+
+</div>

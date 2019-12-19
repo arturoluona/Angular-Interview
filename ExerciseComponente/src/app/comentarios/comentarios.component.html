@@ -1,0 +1,7 @@
+<p [ngClass]="getUserId(id)" style="margin-top: 30px"></p>
+
+<div class="container" *ngFor="let coment of coments">
+	<hr>
+	<p> <b> Nombre: </b> {{coment.name}} </p>
+	<p> <b> Comentario: </b> {{coment.body}} </p>	
+</div>

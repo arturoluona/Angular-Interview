@@ -1,0 +1,35 @@
+<div class="container">
+	<br>
+	
+	<div class="row">
+		<div class="col-4">
+			<h1 align="center">Post Detail</h1>
+			<br>
+			<table class="table table-hover">
+
+			  <tbody>
+			  	<tr>
+			      <th scope="row" *ngIf="posts.id">ID: {{posts.id}} </th>
+			      <td scope="row" align="right" *ngIf="posts.userId">User Id: {{posts.userId}}</td>			  		
+			  	</tr>
+			    <tr>
+			      <td colspan="2" *ngIf="posts.title">{{posts.title}}</td>
+			    </tr>
+			    <tr>			    	
+			      <td colspan="2" *ngIf="posts.body"> {{posts.body}} </td>
+			    </tr>
+			   
+			  </tbody> 
+			</table>
+			<hr>
+			<a routerLink="" class="btn btn-secondary">Go Back</a>
+			<br><hr>
+			<p>{{fecha}}</p>
+		</div>
+
+		<!-- Componente comentarios -->
+		<div class="col-8">			
+			<app-comentarios [id]="posts.userId"></app-comentarios>	
+		</div>
+	</div>
+</div>
